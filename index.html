@@ -625,7 +625,7 @@
                                                     key={item}
                                                     href={`#${sectionId}`}
                                                     onClick={(e) => navigateTo(e, sectionId)}
-                                                    className="ml-4 px-6 py-2.5 glass-button text-white text-xs font-bold tracking-widest uppercase rounded-full transition-all duration-500 ease-out hover:scale-105"
+                                                    className="ml-4 px-6 py-2 bg-transparent border border-white/80 text-white text-xs font-bold tracking-widest uppercase rounded-full transition-all duration-300 ease-in-out hover:scale-105 hover:bg-white hover:text-black hover:shadow-[0_0_25px_rgba(255,255,255,0.6)]"
                                                 >
                                                     {item}
                                                 </a>
@@ -660,7 +660,7 @@
                                 <a
                                     href="#book-now"
                                     onClick={(e) => navigateTo(e, 'book-now')}
-                                    className="px-5 py-2 glass-button text-white text-xs font-bold tracking-wider uppercase rounded-full transition-all duration-300 active:scale-95 animate-pulse-glow"
+                                    className="px-6 py-2 bg-white text-black text-xs font-bold tracking-wider uppercase rounded-full transition-all duration-300 active:bg-gray-200 animate-pulse-glow"
                                 >
                                     Book Now
                                 </a>
@@ -860,9 +860,7 @@
                                 {/* Glow effect */}
                                 <div className="absolute -inset-0.5 bg-gradient-to-r from-white/20 via-white/30 to-white/20 rounded-full blur-sm opacity-50 group-hover:opacity-75 transition duration-500"></div>
                                 {/* Badge content */}
-                                <div className="relative px-8 py-2.5 rounded-full backdrop-blur-md bg-gradient-to-r from-white/5 via-white/10 to-white/5 border border-white/30 shadow-lg">
-                                    <span className="text-white text-xs sm:text-sm font-light tracking-[0.25em] uppercase" style={{ textShadow: '0 2px 10px rgba(255,255,255,0.3)' }}>Est. 2024</span>
-                                </div>
+                                
                             </div>
                         </div>
                         <h1 
@@ -877,14 +875,14 @@
                             className="text-gray-200 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed animate-item-reveal" 
                             style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)', animationDelay: '900ms', letterSpacing: '0.02em' }}
                         >
-                            Creating visual legacies that transcend time—where today's moments become tomorrow's treasured memories.
+                            
                         </p>
                         {/* Sub-tagline */}
                         <p 
                             className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto mt-4 animate-item-reveal" 
                             style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)', animationDelay: '1000ms', letterSpacing: '0.01em' }}
                         >
-                            Your story deserves more than documentation. It deserves to be immortalized.
+                          
                         </p>
                     </div>
 
