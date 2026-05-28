@@ -603,71 +603,73 @@
             }, []);
 
             return (
-                <header className={`fixed top-0 w-full z-50 transition-all duration-700 ease-in-out ${scrolled ? 'bg-neutral-950/40 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.6)]' : 'bg-transparent'}`}>
-                    <div className="max-w-7xl mx-auto px-6">
-                        <div className={`flex justify-between items-center transition-all duration-500 ${scrolled ? 'h-16' : 'h-24'}`}>
-                            {/* --- Desktop Navigation --- */}
-                            <div className="hidden lg:flex justify-between items-center w-full">
-                                <a
-                                    href="#home"
-                                    onClick={(e) => navigateTo(e, 'home')}
-                                    className={`font-logo text-white cursor-pointer hover:scale-105 transition-all duration-500 tracking-tighter ${scrolled ? 'text-3xl' : 'text-4xl'}`}
-                                    style={{ textShadow: '0 0 20px rgba(255,255,255,0.3)' }}
-                                >
-                                    DDV.
-                                </a>
-                                <nav className="flex items-center space-x-2">
-                                    {navItems.map((item) => {
-                                        const sectionId = item.toLowerCase().replace(' ', '-');
-                                        if (item === 'Book Now') {
+                <div className={`fixed w-full z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex justify-center pointer-events-none ${scrolled ? 'top-4 px-4 sm:px-6' : 'top-0 px-0'}`}>
+                    <header className={`w-full max-w-6xl pointer-events-auto transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'bg-neutral-900/40 backdrop-blur-2xl backdrop-saturate-150 border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.5)] rounded-full' : 'bg-transparent border border-transparent'}`}>
+                        <div className="px-6 md:px-10">
+                            <div className={`flex justify-between items-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-16' : 'h-24'}`}>
+                                {/* --- Desktop Navigation --- */}
+                                <div className="hidden lg:flex justify-between items-center w-full">
+                                    <a
+                                        href="#home"
+                                        onClick={(e) => navigateTo(e, 'home')}
+                                        className={`font-logo text-white cursor-pointer hover:scale-105 transition-all duration-700 tracking-tighter ${scrolled ? 'text-2xl' : 'text-4xl'}`}
+                                        style={{ textShadow: scrolled ? 'none' : '0 0 20px rgba(255,255,255,0.3)' }}
+                                    >
+                                        DDV.
+                                    </a>
+                                    <nav className="flex items-center space-x-2">
+                                        {navItems.map((item) => {
+                                            const sectionId = item.toLowerCase().replace(' ', '-');
+                                            if (item === 'Book Now') {
+                                                return (
+                                                    <a
+                                                        key={item}
+                                                        href={`#${sectionId}`}
+                                                        onClick={(e) => navigateTo(e, sectionId)}
+                                                        className={`ml-4 px-6 bg-transparent border border-white/80 text-white text-xs font-bold tracking-widest uppercase rounded-full transition-all duration-300 ease-in-out hover:scale-105 hover:bg-white hover:text-black hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] ${scrolled ? 'py-1.5' : 'py-2'}`}
+                                                    >
+                                                        {item}
+                                                    </a>
+                                                );
+                                            }
                                             return (
                                                 <a
                                                     key={item}
                                                     href={`#${sectionId}`}
                                                     onClick={(e) => navigateTo(e, sectionId)}
-                                                    className="ml-4 px-6 py-2 bg-transparent border border-white/80 text-white text-xs font-bold tracking-widest uppercase rounded-full transition-all duration-300 ease-in-out hover:scale-105 hover:bg-white hover:text-black hover:shadow-[0_0_25px_rgba(255,255,255,0.6)]"
+                                                    className={`group relative px-4 text-xs font-semibold tracking-widest uppercase transition-colors duration-300 ${scrolled ? 'py-1.5' : 'py-2'} ${
+                                                        activeSection === sectionId ? 'text-white' : 'text-gray-400 hover:text-white'
+                                                    }`}
                                                 >
-                                                    {item}
+                                                    <span className="relative z-10">{item}</span>
                                                 </a>
                                             );
-                                        }
-                                        return (
-                                            <a
-                                                key={item}
-                                                href={`#${sectionId}`}
-                                                onClick={(e) => navigateTo(e, sectionId)}
-                                                className={`group relative px-4 py-2 text-xs font-semibold tracking-widest uppercase transition-colors duration-300 ${
-                                                    activeSection === sectionId ? 'text-white' : 'text-gray-400 hover:text-white'
-                                                }`}
-                                            >
-                                                <span className="relative z-10">{item}</span>
-                                            </a>
-                                        );
-                                    })}
-                                </nav>
-                            </div>
+                                        })}
+                                    </nav>
+                                </div>
 
-                            {/* --- Mobile Header --- */}
-                            <div className="lg:hidden flex justify-between items-center w-full">
-                                <a
-                                    href="#home"
-                                    onClick={(e) => navigateTo(e, 'home')}
-                                    className={`font-logo text-white cursor-pointer transition-all duration-300 ${scrolled ? 'text-3xl' : 'text-4xl'}`}
-                                    style={{ textShadow: '0 0 20px rgba(255,255,255,0.3)' }}
-                                >
-                                    DDV.
-                                </a>
-                                <a
-                                    href="#book-now"
-                                    onClick={(e) => navigateTo(e, 'book-now')}
-                                    className="px-6 py-2 bg-white text-black text-xs font-bold tracking-wider uppercase rounded-full transition-all duration-300 active:bg-gray-200 animate-pulse-glow"
-                                >
-                                    Book Now
-                                </a>
+                                {/* --- Mobile Header --- */}
+                                <div className="lg:hidden flex justify-between items-center w-full">
+                                    <a
+                                        href="#home"
+                                        onClick={(e) => navigateTo(e, 'home')}
+                                        className={`font-logo text-white cursor-pointer transition-all duration-700 ${scrolled ? 'text-2xl' : 'text-4xl'}`}
+                                        style={{ textShadow: scrolled ? 'none' : '0 0 20px rgba(255,255,255,0.3)' }}
+                                    >
+                                        DDV.
+                                    </a>
+                                    <a
+                                        href="#book-now"
+                                        onClick={(e) => navigateTo(e, 'book-now')}
+                                        className={`px-6 bg-white text-black text-xs font-bold tracking-wider uppercase rounded-full transition-all duration-300 active:bg-gray-200 animate-pulse-glow ${scrolled ? 'py-1.5' : 'py-2'}`}
+                                    >
+                                        Book Now
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </header>
+                    </header>
+                </div>
             );
         };
         
