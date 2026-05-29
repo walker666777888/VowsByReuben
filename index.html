@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>DDV Photo & Film </title>
+    <title>Vows </title>
     <link rel="icon" type="image/png" href="images/logo.png">
     
     <meta name="description" content="Professional photography and cinematic film services by DDV. We specialize in weddings, events, and corporate functions, crafting timeless visual narratives.">
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://your-website-url.com/" id="canonical-link">
     <meta property="og:url" content="https://your-website-url.com/">
-    <meta property="og:site_name" content="DDV Photo & Film">
+    <meta property="og:site_name" content="Vows">
     <meta property="og:title" content="DDV Photo & Film | Crafting Timeless Visual Narratives">
     <meta property="og:description" content="Professional photography and cinematic film services by DDV. We specialize in weddings, events, and corporate functions.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop">
@@ -639,7 +639,7 @@
 
             return (
                 <div className={`fixed w-full z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex justify-center pointer-events-none ${scrolled ? 'top-4 px-4 sm:px-6' : 'top-0 px-0'}`}>
-                    <header className={`w-full max-w-6xl pointer-events-auto transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'bg-neutral-600/30 backdrop-blur-2xl backdrop-saturate-150 border border-white/15 shadow-[0_20px_40px_rgba(0,0,0,0.4)] rounded-full' : 'bg-transparent border border-transparent'}`}>
+                    <header className={`w-full max-w-6xl pointer-events-auto transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'bg-white/15 backdrop-blur-2xl backdrop-saturate-200 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] rounded-full' : 'bg-transparent border border-transparent'}`}>
                         <div className="px-6 md:px-10">
                             <div className={`flex justify-between items-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-16' : 'h-24'}`}>
                                 {/* --- Desktop Navigation --- */}
@@ -697,7 +697,7 @@
                                         className={`font-logo text-white cursor-pointer transition-all duration-700 ${scrolled ? 'text-2xl' : 'text-4xl'}`}
                                         style={{ textShadow: scrolled ? 'none' : '0 0 20px rgba(255,255,255,0.3)' }}
                                     >
-                                        Vows
+                                        Vows 
                                     </a>
                                     <a
                                         href="#book-now"
@@ -721,17 +721,17 @@
         const Footer = () => {
             const currentYear = new Date().getFullYear();
             return (
-                <footer className="bg-black border-t border-white/8 py-14">
+                <footer className="bg-neutral-800 border-t border-white/10 py-14">
                     <div className="max-w-5xl mx-auto px-6">
                         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
                             <div>
                                 <span className="font-logo text-white text-2xl tracking-tighter">Vows</span>
-                                <p className="text-white/20 text-[9px] tracking-[0.25em] uppercase mt-1">Photo &amp; Film · India</p>
+                                <p className="text-white/45 text-[9px] tracking-[0.25em] uppercase mt-1">Photo &amp; Film · India</p>
                             </div>
                             <div className="flex items-center gap-8">
-                                <a href="https://www.instagram.com/ddv.ig_" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white transition-colors duration-300 text-[9px] tracking-[0.25em] uppercase" aria-label="Instagram">Instagram</a>
-                                <a href="https://www.youtube.com/@ddvyt7" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white transition-colors duration-300 text-[9px] tracking-[0.25em] uppercase" aria-label="YouTube">YouTube</a>
-                                <span className="text-white/15 text-[9px] tracking-[0.2em] uppercase">© {currentYear}</span>
+                                <a href="https://www.instagram.com/ddv.ig_" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors duration-300 text-[9px] tracking-[0.25em] uppercase" aria-label="Instagram">Instagram</a>
+                                <a href="https://www.youtube.com/@ddvyt7" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors duration-300 text-[9px] tracking-[0.25em] uppercase" aria-label="YouTube">YouTube</a>
+                                <span className="text-white/35 text-[9px] tracking-[0.2em] uppercase">© {currentYear}</span>
                             </div>
                         </div>
                     </div>
